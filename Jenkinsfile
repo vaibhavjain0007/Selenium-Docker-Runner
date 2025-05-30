@@ -22,7 +22,7 @@ pipeline {
     post {
         always {
           echo "Post Run always"
-          archiveArtifacts artifacts: 'output/**'
+          // archiveArtifacts artifacts: 'output/**'
           bat 'docker-compose -f "C:/Users/Vaibhav Jain/OrangeHRM/Selenium-Docker-Runner/docker-compose.yml" down'
         }
     }
