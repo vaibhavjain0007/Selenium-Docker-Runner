@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Wait for Other Project') {
             steps {
-                build job: 'Other-Project-Job-Name', wait: true, propagate: true
+                build job: 'Selenium-docker-builder', wait: true, propagate: true
             }
         }
         
