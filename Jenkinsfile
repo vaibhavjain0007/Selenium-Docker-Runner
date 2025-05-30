@@ -8,13 +8,13 @@ pipeline {
         }
         stage ('Start Grid') {
             steps {
-                bat 'docker-compose -f "C:/Users/Vaibhav Jain/OrangeHRM/Selenium-docker-runner/docker-compose.yml" up -d hub chrome firefox'
+                bat 'docker-compose -f "C:/Users/Vaibhav Jain/OrangeHRM/Selenium-Docker-Runner/docker-compose.yml" up -d hub chrome firefox'
             }
         }
         stage ('Run Test') {
             steps {
                 //sh
-                bat 'docker-compose -f "C:/Users/Vaibhav Jain/OrangeHRM/Selenium-docker-runner/docker-compose.yml" up -d search-module'
+                bat 'docker-compose -f "C:/Users/Vaibhav Jain/OrangeHRM/Selenium-Docker-Runner/docker-compose.yml" up -d search-module'
             }
         }
     }
@@ -23,7 +23,7 @@ pipeline {
         always {
           echo "Post Run always"
           archiveArtifacts artifacts: 'output/**'
-          bat 'docker-compose -f "C:/Users/Vaibhav Jain/OrangeHRM/Selenium-docker-runner/docker-compose.yml" down'
+          bat 'docker-compose -f "C:/Users/Vaibhav Jain/OrangeHRM/Selenium-Docker-Runner/docker-compose.yml" down'
         }
     }
 }
