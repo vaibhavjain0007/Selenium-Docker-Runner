@@ -30,4 +30,4 @@ services:
       - BROWSER=chrome
       - MODULE=testng.xml
     volumes:
-      - ./output:Users/Vaibhav Jain/OrangeHRM/OrangeHRM
+      - ./output:/app/output
